@@ -20,7 +20,8 @@ defmodule Bmrk.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Bmrk do
-  #   pipe_through :api
-  # end
+  scope "/api", Bmrk do
+    pipe_through :api
+    resources "/bookmarks", BookmarkController, except: [:new, :edit]
+  end
 end
