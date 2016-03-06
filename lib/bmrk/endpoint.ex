@@ -35,5 +35,6 @@ defmodule Bmrk.Endpoint do
     key: "_bmrk_key",
     signing_salt: "NmvX2I/O"
 
+  plug Corsica, origins: "*"
   plug Bmrk.Router
 end
