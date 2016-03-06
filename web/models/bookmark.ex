@@ -1,6 +1,8 @@
 defmodule Bmrk.Bookmark do
   use Bmrk.Web, :model
 
+  @primary_key {:id, :binary_id, autogenerate: true}
+
   schema "bookmarks" do
     field :url, :string
     field :title, :string
