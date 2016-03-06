@@ -11,7 +11,7 @@ defmodule Bmrk.Bookmark do
   end
 
   @required_fields ~w(url)
-  @optional_fields ~w(tile description notes)
+  @optional_fields ~w(title description notes)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
