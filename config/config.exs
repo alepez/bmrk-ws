@@ -9,8 +9,8 @@ use Mix.Config
 config :bmrk, Bmrk.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "pNcy1ji9ZUAiGcZHSZ/aY14SG6s3Y/flzYpRyDHjNW4yMqU2xCN8F1SMZI4lRHZM",
-  render_errors: [accepts: ~w(html json)],
+  secret_key_base: "Ie8DGZoNO60Ex6dKxAifTyX9hotJedqcnpVCwujkrU1+2YCB2kVgFJWlNQkjPSJB",
+  render_errors: [accepts: ~w(json)],
   pubsub: [name: Bmrk.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
@@ -26,4 +26,4 @@ import_config "#{Mix.env}.exs"
 # Configure phoenix generators
 config :phoenix, :generators,
   migration: true,
-  binary_id: false
+  binary_id: true

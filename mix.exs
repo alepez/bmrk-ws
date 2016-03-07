@@ -18,7 +18,7 @@ defmodule Bmrk.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Bmrk, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:phoenix, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -33,10 +33,7 @@ defmodule Bmrk.Mixfile do
     [{:phoenix, "~> 1.1.4"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_ecto, "~> 2.0"},
-     {:phoenix_html, "~> 2.4"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
-     {:corsica, "~> 0.4"},
      {:cowboy, "~> 1.0"}]
   end
 
