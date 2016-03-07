@@ -20,11 +20,6 @@ defmodule Bmrk.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
 
-  plug Plug.Session,
-    store: :cookie,
-    key: "_bmrk_key",
-    signing_salt: "q27zwnyM"
-
   plug Corsica, origins: "*", allow_headers: ["accept", "content-type"]
   plug Bmrk.Router
 end
