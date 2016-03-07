@@ -25,6 +25,6 @@ defmodule Bmrk.Endpoint do
     key: "_bmrk_key",
     signing_salt: "q27zwnyM"
 
-  plug Corsica, origins: "*"
+  plug Corsica, origins: "*", allow_headers: ["accept", "content-type"]
   plug Bmrk.Router
 end

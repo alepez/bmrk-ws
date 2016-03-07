@@ -10,8 +10,8 @@ defmodule Bmrk.Bookmark do
     timestamps
   end
 
-  @required_fields ~w(url title description notes)
-  @optional_fields ~w()
+  @required_fields ~w(url)
+  @optional_fields ~w(title description notes)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
