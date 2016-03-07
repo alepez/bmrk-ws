@@ -3,14 +3,6 @@ defmodule Bmrk.Endpoint do
 
   socket "/socket", Bmrk.UserSocket
 
-  # Serve at "/" the static files from "priv/static" directory.
-  #
-  # You should set gzip to true if you are running phoenix.digest
-  # when deploying your static files in production.
-  plug Plug.Static,
-    at: "/", from: :bmrk, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
-
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
@@ -33,5 +25,6 @@ defmodule Bmrk.Endpoint do
     key: "_bmrk_key",
     signing_salt: "q27zwnyM"
 
+  plug Corsica, origins: "*"
   plug Bmrk.Router
 end
