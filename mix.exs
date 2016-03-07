@@ -34,6 +34,7 @@ defmodule Bmrk.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:phoenix_ecto, "~> 2.0"},
      {:gettext, "~> 0.9"},
+     {:corsica, "~> 0.4"},
      {:cowboy, "~> 1.0"}]
   end
 

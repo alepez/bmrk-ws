@@ -7,5 +7,6 @@ defmodule Bmrk.Router do
 
   scope "/api", Bmrk do
     pipe_through :api
+    resources "/bookmarks", BookmarkController, except: [:new, :edit]
   end
 end
