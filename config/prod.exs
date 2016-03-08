@@ -1,7 +1,6 @@
 use Mix.Config
 
 config :bmrk, Bmrk.Endpoint,
-  # debug_errors: true,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "bmrk.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
@@ -12,5 +11,5 @@ config :bmrk, Bmrk.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: 20
 
-# config :logger, level: :debug
-config :logger, :console, format: "[$level] $message\n"
+config :logger, level: :debug
+# config :logger, :console, format: "[$level] $message\n"
