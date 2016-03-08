@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :bmrk, Bmrk.Endpoint,
-  debug_errors: true,
+  # debug_errors: true,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "bmrk.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
